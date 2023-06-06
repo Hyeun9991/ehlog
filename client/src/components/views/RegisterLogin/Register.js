@@ -7,6 +7,7 @@ import { registerUser } from '../../../_actions/user_actions';
 import { fontSizes } from '../../../theme/theme';
 import { useTheme } from '../../../context/themeProvider';
 import ThemeToggle from '../../ThemeToggle';
+import SecondHeader from '../../Layout/Header/SecondHeader/SecondHeader';
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -51,11 +52,7 @@ const Register = () => {
   return (
     <Container>
       <ThemeToggle toggle={toggleTheme} mode={ThemeMode} />
-      <HeaderContainer>
-        <LogoWrap>
-          <Link to="/">boiler plate</Link>
-        </LogoWrap>
-      </HeaderContainer>
+      <SecondHeader />
       <RegisterFormContainer>
         <Title>Sign up</Title>
         <Form onSubmit={handleSubmit(onSubmit)}>

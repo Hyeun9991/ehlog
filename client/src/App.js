@@ -5,6 +5,7 @@ import Auth from './hoc/auth';
 import Landing from './components/views/Landing/Landing';
 import Login from './components/views/RegisterLogin/Login';
 import Register from './components/views/RegisterLogin/Register';
+import Post from './components/views/Post/Post';
 
 function App() {
   /**
@@ -22,6 +23,7 @@ function App() {
   const AuthenticLandingPage = Auth(Landing, null);
   const AuthenticLoginPage = Auth(Login, false);
   const AuthenticRegisterPage = Auth(Register, false);
+  const AuthenticPostPage = Auth(Post, true);
 
   return (
     <ThemeProvider>
@@ -30,6 +32,7 @@ function App() {
         <Route path="/" element={<AuthenticLandingPage />} />
         <Route path="/login" element={<AuthenticLoginPage />} />
         <Route path="/register" element={<AuthenticRegisterPage />} />
+        <Route path="/post" element={<AuthenticPostPage />} />
       </Routes>
     </ThemeProvider>
   );

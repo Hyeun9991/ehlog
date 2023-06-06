@@ -7,6 +7,7 @@ import { loginUser } from '../../../_actions/user_actions';
 import { fontSizes } from '../../../theme/theme';
 import { useTheme } from '../../../context/themeProvider';
 import ThemeToggle from '../../ThemeToggle';
+import SecondHeader from '../../Layout/Header/SecondHeader/SecondHeader';
 
 const Login = () => {
   const dispatch = useDispatch();
@@ -40,11 +41,7 @@ const Login = () => {
   return (
     <Container>
       <ThemeToggle toggle={toggleTheme} mode={ThemeMode} />
-      <HeaderContainer>
-        <LogoWrap>
-          <Link to="/">boiler plate</Link>
-        </LogoWrap>
-      </HeaderContainer>
+      <SecondHeader />
       <LoginFormContainer>
         <Title>Sign in</Title>
         <Form onSubmit={handleSubmit(onSubmit)}>
@@ -103,35 +100,6 @@ const Container = styled.div`
     #6606ad60,
     ${({ theme }) => theme.bg_main1} 30%
   );
-`;
-const HeaderContainer = styled.div`
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 120px;
-  display: flex;
-  align-items: center;
-  padding: 0 5%;
-
-  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
-  @media all and (max-width: 767px) {
-    height: 70px;
-  }
-`;
-const LogoWrap = styled.h1`
-  text-transform: uppercase;
-  font-size: ${fontSizes.lg};
-  font-weight: 600;
-  a {
-    text-decoration: none;
-    color: ${({ theme }) => theme.text1};
-  }
-
-  /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
-  @media all and (max-width: 767px) {
-    font-size: ${fontSizes.base};
-  }
 `;
 const LoginFormContainer = styled.div`
   background: ${({ theme }) => theme.bg_element1};

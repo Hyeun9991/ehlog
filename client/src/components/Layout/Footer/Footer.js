@@ -8,7 +8,7 @@ const Footer = () => {
     <FooterContainer>
       <Menu>
         <LogoWrap>
-          <Link to={'/'}>boiler plate</Link>
+          <Link to={'/'}>Ehlog</Link>
         </LogoWrap>
 
         <MenuContainer>

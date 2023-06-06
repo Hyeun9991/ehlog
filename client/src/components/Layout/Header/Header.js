@@ -10,7 +10,7 @@ const Header = () => {
       <Menu>
         <LeftSection>
           <LogoWrap>
-            <Link to={'/'}>boiler plate</Link>
+            <Link to={'/'}>Ehlog</Link>
           </LogoWrap>
         </LeftSection>
 

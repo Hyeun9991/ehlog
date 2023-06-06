@@ -42,7 +42,10 @@ const RightMenu = () => {
           )}
         </MenuItem>
         <MenuItem>
-          <NavLink to="#" onClick={logoutHandler} className="logout-btn">
+          <NavLink to="/post">Write</NavLink>
+        </MenuItem>
+        <MenuItem>
+          <NavLink to="#" onClick={logoutHandler}>
             Logout
           </NavLink>
         </MenuItem>
@@ -58,11 +61,7 @@ const RightMenuContainer = styled.ul`
 
   /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/
   @media all and (max-width: 767px) {
-    gap: 0;
-
-    .user-name {
-      margin-right: 1.5rem;
-    }
+    gap: 1.5rem;
   }
 `;
 
@@ -77,9 +76,11 @@ const MenuItem = styled.li`
     text-transform: uppercase;
     transition-duration: 0.2s;
     transition: 0.22s ease-in-out;
+    opacity: 0.5;
 
     &:hover {
       color: #6606ad;
+      opacity: 1;
     }
   }
 

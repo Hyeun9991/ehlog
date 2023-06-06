@@ -8,7 +8,8 @@ export const fontSizes = {
   xl: calcRem(20),
   xxl: calcRem(22),
   xxxl: calcRem(24),
-  titleSize: calcRem(50),
+  titleSmallSize: calcRem(32),
+  titleSize: calcRem(42),
 };
 
 export const lightTheme = {
