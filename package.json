@@ -1,0 +1,40 @@
+{
+  "name": "boiler-plate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "18.14.0",
+    "npm": "9.3.1"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "backend": "nodemon server/index.js",
+    "frontend": "npm run start --prefix client",
+    "dev": "concurrently \" npm run backend\" \"npm run start --prefix client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hyeun9991/boiler-plate.git"
+  },
+  "author": "eh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hyeun9991/boiler-plate/issues"
+  },
+  "homepage": "https://github.com/Hyeun9991/boiler-plate#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "concurrently": "^8.0.1",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.2.1"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.2.11",
+    "http-proxy-middleware": "^2.0.6",
+    "nodemon": "^2.0.22"
+  }
+}
